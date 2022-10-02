@@ -1,7 +1,7 @@
 import { v4 as uuidV4 } from 'uuid';
-import { Project } from '../../infra/db/entities/Project';
-import { CreateProjectService } from '../../modules/Project/usecases/CreateProject/CreateProjectService';
-import { CreateProjectRepositoryInMemory } from '../../modules/Project/usecases/CreateProject/infra/repositories/inmemory/CreateProjectRepositoryInMemory';
+import { Project } from '../../../infra/db/entities/Project';
+import { CreateProjectService } from '../../../modules/Project/usecases/CreateProject/CreateProjectService';
+import { CreateProjectRepositoryInMemory } from '../../../modules/Project/usecases/CreateProject/infra/repositories/inmemory/CreateProjectRepositoryInMemory';
 
 let createProjectRepository: CreateProjectRepositoryInMemory;
 let createProjectService: CreateProjectService;

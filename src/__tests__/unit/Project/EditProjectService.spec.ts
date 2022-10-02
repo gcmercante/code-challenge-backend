@@ -1,6 +1,6 @@
 import { v4 as uuidV4 } from 'uuid';
-import { EditProjectService } from '../../modules/Project/usecases/EditProject/EditProjectService';
-import { EditProjectRepositoryInMemory } from '../../modules/Project/usecases/EditProject/repositories/inmemory/EditProjectRepositoryInMemory';
+import { EditProjectService } from '../../../modules/Project/usecases/EditProject/EditProjectService';
+import { EditProjectRepositoryInMemory } from '../../../modules/Project/usecases/EditProject/repositories/inmemory/EditProjectRepositoryInMemory';
 
 let editProjectRepository: EditProjectRepositoryInMemory;
 let editProjectService: EditProjectService

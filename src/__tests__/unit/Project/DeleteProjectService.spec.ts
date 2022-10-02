@@ -1,6 +1,6 @@
 import { v4 as uuidV4 } from 'uuid';
-import { DeleteProjectService } from '../../modules/Project/usecases/DeleteProject/infra/DeleteProjectService';
-import { DeleteProjectRepositoryInMemory } from '../../modules/Project/usecases/DeleteProject/infra/repositories/inmemory/DeleteProjectRepositoryInMemory';
+import { DeleteProjectService } from '../../../modules/Project/usecases/DeleteProject/infra/DeleteProjectService';
+import { DeleteProjectRepositoryInMemory } from '../../../modules/Project/usecases/DeleteProject/infra/repositories/inmemory/DeleteProjectRepositoryInMemory';
 
 let deleteProjectRepository: DeleteProjectRepositoryInMemory;
 let deleteProjectService: DeleteProjectService;

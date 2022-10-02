@@ -17,7 +17,9 @@ export class Task {
   @Column()
   public created_at?: Date;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   public finished_at?: Date;
 
   @ManyToOne(() => Project, (project) => project.id)
@@ -28,6 +30,7 @@ export class Task {
     if(!this.id) {
       this.id = uuidV4();
       this.created_at = new Date();
+      this.done = false;
     }
   }
 }
