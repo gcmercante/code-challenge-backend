@@ -12,8 +12,8 @@ AppDataSource.initialize()
     const { setupApp } = await import('../config/app');
     const app = await setupApp();
   
-    server = app.listen(3333, () =>
-      console.log(`Server running at http://localhost:${3333}`),
+    server = app.listen(process.env.APP_PORT, () =>
+      console.log(`Server listening to port ${process.env.APP_PORT}`),
     );
   })
   .catch((error) => console.error(error));
