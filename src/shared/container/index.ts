@@ -31,3 +31,13 @@ import { IEditTaskRepository } from '../../modules/Task/usecases/EditTask/infra/
 container.registerSingleton<ICreateTaskRepository>('CreateTaskRepository', CreateTaskRepository);
 container.registerSingleton<IDeleteTaskRepository>('DeleteTaskRepository', DeleteTaskRepository);
 container.registerSingleton<IEditTaskRepository>('EditTaskRepository', EditTaskRepository);
+
+// User Module Injections
+import { ISignUpRepository } from '../../modules/User/usecases/SignUp/infra/repositories/interfaces/ISignUpRepository';
+import { SignUpRepository } from '../../modules/User/usecases/SignUp/infra/repositories/SignUpRepository';
+
+import { ISignInRepository } from '../../modules/User/usecases/SignIn/infra/repositories/interfaces/ISignInRepository';
+import { SignInRepository } from '../../modules/User/usecases/SignIn/infra/repositories/SignInRepository';
+
+container.registerSingleton<ISignUpRepository>('SignUpRepository', SignUpRepository);
+container.registerSingleton<ISignInRepository>('SignInRepository', SignInRepository);
