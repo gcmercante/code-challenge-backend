@@ -22,4 +22,8 @@ container.registerSingleton<IEditProjectRepository>('EditProjectRepository', Edi
 import { CreateTaskRepository } from '../../modules/Task/usecases/CreateTask/infra/repositories/CreateTaskRepository';
 import { ICreateTaskRepository } from '../../modules/Task/usecases/CreateTask/infra/repositories/interfaces/ICreateTaskRepository';
 
+import { DeleteTaskRepository } from '../../modules/Task/usecases/DeleteTask/infra/repositories/DeleteTaskRepository';
+import { IDeleteTaskRepository } from '../../modules/Task/usecases/DeleteTask/infra/repositories/interfaces/IDeleteTaskRepository';
+
 container.registerSingleton<ICreateTaskRepository>('CreateTaskRepository', CreateTaskRepository);
+container.registerSingleton<IDeleteTaskRepository>('DeleteTaskRepository', DeleteTaskRepository);

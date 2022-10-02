@@ -10,6 +10,7 @@ export class CreateTaskRepository implements ICreateTaskRepository {
   constructor() {
     this.repository = AppDataSource.getRepository(Task);
   }
+  
   async create(task: CreateTaskDTO): Promise<Task> {
     const newTask = this.repository.create({ ...task });
 
