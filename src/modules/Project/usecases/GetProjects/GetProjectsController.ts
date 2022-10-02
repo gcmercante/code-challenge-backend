@@ -6,11 +6,11 @@ import { GetProjectsService } from './GetProjectsService';
 
 export class GetProjectController {
   async handle(request: Request, response: Response) {
-    const { user } = request.headers as CustomHeaders;
+    const { user } = request;
     
     const getProjectService = container.resolve(GetProjectsService);
 
-    const result = await getProjectService.execute(user);
+    const result = await getProjectService.execute(user.id);
 
     return response.json(result);
   }
