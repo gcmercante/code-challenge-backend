@@ -1,6 +1,7 @@
+import 'express-async-errors';
 import express, { Express, Request, Response, NextFunction } from 'express';
-import { router } from '../http/routes';
 
+import { router } from '../http/routes';
 import '../../shared/container';
 import { AppError } from '../../shared/errors/AppError';
 
