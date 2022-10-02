@@ -1,6 +1,6 @@
 import { v4 as uuidV4 } from 'uuid';
-import { GetProjectsService } from "../../usecases/GetProjects/GetProjectsService";
-import { GetProjectsRepositoryInMemory } from "../../usecases/GetProjects/infra/repositories/inmemory/GetProjectsRepositoryInMemory";
+import { GetProjectsService } from '../../modules/Project/usecases/GetProjects/GetProjectsService';
+import { GetProjectsRepositoryInMemory } from '../../modules/Project/usecases/GetProjects/infra/repositories/inmemory/GetProjectsRepositoryInMemory';
 
 let getProjectsRepository: GetProjectsRepositoryInMemory;
 let getProjectsService: GetProjectsService
