@@ -11,7 +11,7 @@ export class EditProjectRepository implements IEditProjectRepository{
   }
   
   async update(projectId: string, title: string): Promise<Project> {
-    const result = await this.repository.save({ id: projectId, title: title });
+    const result = await this.repository.save({ id: projectId, title });
 
     return result;
   }

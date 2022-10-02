@@ -25,5 +25,9 @@ import { ICreateTaskRepository } from '../../modules/Task/usecases/CreateTask/in
 import { DeleteTaskRepository } from '../../modules/Task/usecases/DeleteTask/infra/repositories/DeleteTaskRepository';
 import { IDeleteTaskRepository } from '../../modules/Task/usecases/DeleteTask/infra/repositories/interfaces/IDeleteTaskRepository';
 
+import { EditTaskRepository } from '../../modules/Task/usecases/EditTask/infra/repositories/EditTaskRepository';
+import { IEditTaskRepository } from '../../modules/Task/usecases/EditTask/infra/repositories/interface/IEditTaskRepository';
+
 container.registerSingleton<ICreateTaskRepository>('CreateTaskRepository', CreateTaskRepository);
 container.registerSingleton<IDeleteTaskRepository>('DeleteTaskRepository', DeleteTaskRepository);
+container.registerSingleton<IEditTaskRepository>('EditTaskRepository', EditTaskRepository);
