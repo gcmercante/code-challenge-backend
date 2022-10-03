@@ -10,8 +10,15 @@ export class EditProjectRepository implements IEditProjectRepository{
     this.repository = AppDataSource.getRepository(Project);
   }
   
-  async update(projectId: string, title: string): Promise<Project> {
-    const result = await this.repository.save({ id: projectId, title });
+  async update(id: string, title: string): Promise<Project> {
+    await this.repository.save({ id, title });
+
+    const [result] = await this.repository.find({
+      relations: {
+        tasks: true,
+      },
+      where: { id }
+    });
 
     return result;
   }

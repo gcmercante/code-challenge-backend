@@ -1,4 +1,5 @@
 import 'express-async-errors';
+import cors from 'cors';
 import express, { Express, Request, Response, NextFunction } from 'express';
 
 import { router } from '../http/routes';
@@ -9,6 +10,8 @@ export async function setupApp(): Promise<Express> {
   const app = express();
 
   app.use(express.json());
+
+  app.use(cors());
 
   app.use('/v1', router);
 

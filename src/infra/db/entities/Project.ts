@@ -16,12 +16,16 @@ export class Project {
   @JoinColumn({ name: 'user_id' })
   public user: User;
 
+  @Column()
+  public created_at: Date;
+
   @OneToMany(() => Task, (task) => task.project)
   tasks: Task[];
 
   constructor() {
     if(!this.id) {
       this.id = uuidv4();
+      this.created_at = new Date();
     }
   }
 }

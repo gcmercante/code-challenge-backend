@@ -16,6 +16,13 @@ export class CreateProjectRepository implements ICreateProjectRepository {
 
     await this.repository.save(newProject);
 
-    return newProject;
+    const [result] = await this.repository.find({
+      relations: {
+        tasks: true,
+      },
+      where: { id: newProject.id }
+    });
+
+    return result;
   }
 }

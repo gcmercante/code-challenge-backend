@@ -22,7 +22,9 @@ export class Task {
   })
   public finished_at?: Date;
 
-  @ManyToOne(() => Project, (project) => project.id)
+  @ManyToOne(() => Project, (project) => project.id, {
+    onDelete: "CASCADE"
+  })
   @JoinColumn({ name: 'project_id' })
   public project: Project;
 

@@ -12,6 +12,13 @@ export class GetProjectsRepository implements IGetProjectsRepository {
 
   async findByUserId(userId: string): Promise<Project[]> {
     const userProjects = await this.repository.find({
+      order: {
+        created_at: "DESC",
+        tasks: {
+          done: "ASC",
+          created_at: "DESC"
+        }
+      },
       relations: {
         tasks: true,
       },
