@@ -21,7 +21,7 @@ export async function ensureAuth(
   const [, token] = authHeader.split(' ');
 
   try {
-    const { sub: id } = verify(token, 'b7d3838bad89053d4e16ae57df86c3f3') as Payload;
+    const { sub: id } = verify(token, process.env.TOKEN_SECRET) as Payload;
 
     const userRepository = new AuthRepository();
     

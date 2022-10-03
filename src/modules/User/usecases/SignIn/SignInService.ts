@@ -30,7 +30,7 @@ export class SignInService {
         name: user.name,
         id: user.id,
       },
-      'b7d3838bad89053d4e16ae57df86c3f3',
+      process.env.TOKEN_SECRET,
       {
         subject: user.id,
         expiresIn: '1d',
