@@ -23,6 +23,7 @@ describe('-- EditProjectService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       },
       {
@@ -34,6 +35,7 @@ describe('-- EditProjectService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       }
     )

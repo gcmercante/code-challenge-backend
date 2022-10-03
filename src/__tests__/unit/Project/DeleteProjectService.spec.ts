@@ -24,6 +24,7 @@ describe('-- DeleteProjectService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       },
       {
@@ -35,6 +36,7 @@ describe('-- DeleteProjectService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       }
     )

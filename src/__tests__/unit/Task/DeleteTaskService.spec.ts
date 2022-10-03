@@ -30,6 +30,7 @@ describe('-- DeleteTaskService --', () => {
             email: 'test@example.com',
             password: 'test',
           },
+          created_at: new Date(),
         },
       },
       {
@@ -46,6 +47,7 @@ describe('-- DeleteTaskService --', () => {
             email: 'test@example.com',
             password: 'test',
           },
+          created_at: new Date(),
         }
       }
     );

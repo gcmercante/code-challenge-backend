@@ -23,6 +23,7 @@ describe('-- GetProjectsService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       },
       {
@@ -34,6 +35,7 @@ describe('-- GetProjectsService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       }
     )
@@ -54,6 +56,7 @@ describe('-- GetProjectsService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       },
       {
@@ -65,6 +68,7 @@ describe('-- GetProjectsService --', () => {
           email: 'test',
           password: 'test',
         },
+        created_at: new Date(),
         tasks: []
       }
     )
